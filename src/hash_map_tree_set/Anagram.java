@@ -11,7 +11,7 @@ public class Anagram {
             result1.put(first.charAt(i), result1.getOrDefault(first.charAt(i), 0)+1);
             result2.put(second.charAt(i), result2.getOrDefault(second.charAt(i), 0)+1);
         }
-        if (result1 == result2) return "YES";
+        if (result1.equals(result2)) return "YES";
         return "NO";
     }
     static String solution2(String first, String second) {
@@ -31,6 +31,6 @@ public class Anagram {
         Scanner scanner = new Scanner(System.in);
         String first = scanner.next();
         String second = scanner.next();
-        System.out.println(solution2(first, second));
+        System.out.println(solution(first, second));
     }
 }
